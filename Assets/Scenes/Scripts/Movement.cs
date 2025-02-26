@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Movement : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class Movement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {       
+    {
         if (player.eulerAngles.x >= lookDownAngle && player.eulerAngles.x < 90.0f)
         {
             moveForward = true;
@@ -30,8 +31,8 @@ public class Movement : MonoBehaviour
         else
         {
             moveForward = false;
-        }
-
+    }
+    
         if (moveForward == true)
         {
             Vector3 forward = player.TransformDirection(Vector3.forward);
